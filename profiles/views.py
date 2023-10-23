@@ -3,17 +3,27 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Profile
 from .serializers import ProfileSerializer
+from firsteverbackend.permissions import IsOwnerOrReadOnly
 
 
 class ProfileList(APIView):
+    """
+    Will list all profiles
+    Will not create view (post method), 
+    as profile creation is handled by django signals
+    """
     def get(self, request):
         profiles = Profile.objects.all()
-        serializer = ProfileSerializer(profiles, many=True)
+        serializer = ProfileSerializer(
+            profiles, many=True, context={'request': request}
+        )
         return Response(serializer.data)
 
 
 class ProfileDetail(APIView):
     serializer_class = ProfileSerializer
+    permission_classes =[IsOwnerOrReadOnly]
+    
     def get_object(self, pk):
         try:
             profile=Profile.objects.get(pk=pk)
@@ -23,12 +33,16 @@ class ProfileDetail(APIView):
 
     def get(self, request, pk):
         profile = self.get_object(pk)
-        serializer=ProfileSerializer(profile)
+        serializer = ProfileSerializer(
+            profile, context={'request': request}
+        )
         return Response(serializer.data)
     
-     def put (self, request, pk):
-        profile =self.get_object(pk)
-        serializer=ProfileSerializer(profile, data=request.data)
+    def put(self, request, pk):
+        profile = self.get_object(pk)
+        serializer = ProfileSerializer(
+            profile, data=request.data, context={'request': request}
+        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
