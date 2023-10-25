@@ -5,11 +5,10 @@ from .settings import (
     JWT_AUTH_SECURE,
 )
 
-
 @api_view()
 def root_route(request):
     return Response({
-        "message": "Welcome to my drf API!"
+        "message": "Welcome to my firstever backend API"
     })
 
 
@@ -36,4 +35,3 @@ def logout_route(request):
         secure=JWT_AUTH_SECURE,
     )
     return response
-    
