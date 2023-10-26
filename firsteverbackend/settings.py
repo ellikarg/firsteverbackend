@@ -41,8 +41,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-   os.environ.get('ALLOWED_HOST'),
-   'localhost',
+    'firsteverbackend.herokuapp.com',
+    'www.firsteverbackend.herokuapp.com',
+    '8000-ellikarg-firsteverbacke-cjbbdw3q4ha.ws-eu105.gitpod.io',
+    'localhost',   
 ]
 
 # Application definition
