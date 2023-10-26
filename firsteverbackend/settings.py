@@ -38,13 +38,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     'firsteverbackend.herokuapp.com',
     'www.firsteverbackend.herokuapp.com',
     '8000-ellikarg-firsteverbacke-cjbbdw3q4ha.ws-eu105.gitpod.io',
-    'localhost',   
+    'localhost',
+    '*'
 ]
 
 # Application definition
