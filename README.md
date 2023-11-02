@@ -1,39 +1,107 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Stories
 
-Welcome,
+## Project goals
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table of contents
+- [Stories](#stories)
+  * [Project goals](#project-goals)
+  * [Table of contents](#table-of-contents)
+  * [Planning](#planning)
+    + [Data models](#data-models)
+    + [**Notification**](#--notification--)
+  * [API endpoints](#api-endpoints)
+  * [Frameworks, libraries and dependencies](#frameworks--libraries-and-dependencies)
+    + [django-cloudinary-storage](#django-cloudinary-storage)
+    + [dj-allauth](#dj-allauth)
+    + [dj-rest-auth](#dj-rest-auth)
+    + [djangorestframework-simplejwt](#djangorestframework-simplejwt)
+    + [dj-database-url](#dj-database-url)
+    + [psychopg2](#psychopg2)
+    + [python-dateutil](#python-dateutil)
+    + [django-recurrence](#django-recurrence)
+    + [django-filter](#django-filter)
+    + [django-cors-headers](#django-cors-headers)
+  * [Testing](#testing)
+    + [Manual testing](#manual-testing)
+    + [Python validation](#python-validation)
+    + [Resolved bugs](#resolved-bugs)
+      - [Bugs found while testing the API in isolation](#bugs-found-while-testing-the-api-in-isolation)
+      - [Bugs found while testing the React front-end](#bugs-found-while-testing-the-react-front-end)
+    + [Unresolved bugs](#unresolved-bugs)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-## Codeanywhere Reminders
+## Planning
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+### Data models
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### **Notification**
+The Notification model represents user notifications. Currently these are implemented for invitations and changes to calendar events, however further notification types could be implemented in the future to compliment additional features.
 
-`http_server`
+Notifications are created programatically when a new event is created or details of an existing event changed - there is no API endpoint to directly create a new notification.
+Notifications have a many to one relationship with the User model to record who the notification is for, and a one to many relationship to the Event model to record which event the notification relates to. The `event` field can have a value of `None` so that it could be utilised for non-event related functionality in the future.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Users can only access and delete their own notifications.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## API endpoints
+| **URL** | **Notes** | **HTTP Method** | **CRUD operation** | **View type** | **POST/PUT data format** |
+|---|---|---:|---|---:|---|
+|  |  |  |  |  |  |
+| **Custom user <br>account endpoints** |  |  |  |  |  |
+|  |  |  |  |  |  |
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Table generated using https://www.tablesgenerator.com/markdown_tables/load
 
-To log into the Heroku toolbelt CLI:
+## Frameworks, libraries and dependencies
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### django-cloudinary-storage
 
----
+### dj-allauth
 
-Happy coding!
+### dj-rest-auth
+
+### djangorestframework-simplejwt
+
+### dj-database-url
+
+### psychopg2
+
+### python-dateutil
+
+### django-recurrence
+
+### django-filter
+
+### django-cors-headers
+
+## Testing
+
+### Manual testing
+
+### Python validation
+
+### Resolved bugs
+
+#### Bugs found while testing the API in isolation
+
+#### Bugs found while testing the React front-end  
+
+### Unresolved bugs
+
+## Deployment
+
+## Credits
+
+In addition, the following documentation was extensively referenced throughout development:
+
+- [Django documentation](https://www.djangoproject.com)
+- [Django Rest Framework documentation](https://www.django-rest-framework.org)
+- [django-filter documentation](https://django-filter.readthedocs.io/en/stable/)
+- [django-recurrence documentation](https://django-recurrence.readthedocs.io/en/latest/)
+- [Python datetime documentation](https://docs.python.org/3/library/datetime.html)
+- [dateutil documentation](https://dateutil.readthedocs.io/en/stable/index.html)
