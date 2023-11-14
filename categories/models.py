@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from posts.models import Post
 
 class Category(models.Model):
     """
@@ -10,12 +9,8 @@ class Category(models.Model):
     name = models.CharField(max_length=40, blank=False, default='')
     owner = models.ForeignKey(
         User,
-        related_name='categories',
+        related_name='category',
         on_delete=models.CASCADE)
-    posts = models.ManyToManyField(
-        Post,
-        related_name='categories',
-        blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
