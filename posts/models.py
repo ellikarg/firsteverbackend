@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from categories.models import Category
 
 
 class Post(models.Model):
@@ -14,6 +15,10 @@ class Post(models.Model):
     content = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_i2ll5s', blank=True
+    )
+    category = models.ForeignKey(
+        Category, related_name='category',
+        on_delete=models.SET_NULL, null=True, default=None
     )
 
     class Meta:
