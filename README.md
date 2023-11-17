@@ -93,58 +93,58 @@ This Django app adds Cross-Origin-Resource Sharing (CORS) headers to responses, 
 The validation was undertaken with the [PEP8 Validator of CodeInstitute](https://pep8ci.herokuapp.com/) for each file with the following results:
 <br><br>
 CATEGORIES APP: <br>
-`admin.py` -> All clear, no errors found
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`admin.py` -> All clear, no errors found<br>
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 COMMENTS APP: <br>
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 FIRSTEVERBACKEND APP: <br>
-`permissions.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`settings.py`  -> All clear, no errors found (although # noqa was used when it did not make sence to break the line)
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
-`wsgi.py`  -> All clear, no errors found
+`permissions.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`settings.py`  -> All clear, no errors found (although # noqa was used when it did not make sence to break the line)<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
+`wsgi.py`  -> All clear, no errors found<br>
 <br><br>
 FOLLOWERS APP: <br>
-`apps.py`  -> All clear, no errors found
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`apps.py`  -> All clear, no errors found<br>
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 LIKES APP: <br>
-`apps.py`  -> All clear, no errors found
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`apps.py`  -> All clear, no errors found<br>
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 POSTS APP: <br>
-`admin.py`  -> All clear, no errors found
-`apps.py`  -> All clear, no errors found
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`admin.py`  -> All clear, no errors found<br>
+`apps.py`  -> All clear, no errors found<br>
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 LIKES APP: <br>
-`admin.py`  -> All clear, no errors found
-`apps.py`  -> All clear, no errors found
-`models.py`  -> All clear, no errors found
-`serializers.py`  -> All clear, no errors found
-`urls.py`  -> All clear, no errors found
-`views.py`  -> All clear, no errors found
+`admin.py`  -> All clear, no errors found<br>
+`apps.py`  -> All clear, no errors found<br>
+`models.py`  -> All clear, no errors found<br>
+`serializers.py`  -> All clear, no errors found<br>
+`urls.py`  -> All clear, no errors found<br>
+`views.py`  -> All clear, no errors found<br>
 <br><br>
 `env.py`  -> All clear, no errors found (although # noqa was used when it did not make sence to break the line)
-
+<br><br>
 
 ### Resolved bugs
 
