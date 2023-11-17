@@ -78,12 +78,12 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [( 
-        'rest_framework.authentication.SessionAuthentication' 
-        if 'DEV' in os.environ 
+    'DEFAULT_AUTHENTICATION_CLASSES': [(
+        'rest_framework.authentication.SessionAuthentication'
+        if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
     )],
-    'DEFAULT_PAGINATION_CLASS':  'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',  # noqa
     'PAGE_SIZE': 10,
     'DATETIME_FORMAT': '%d %b %Y'
     }
@@ -99,7 +99,7 @@ JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_SECURE = True
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'firsteverbackend.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'firsteverbackend.serializers.CurrentUserSerializer'  # noqa
 }
 
 MIDDLEWARE = [
@@ -119,7 +119,9 @@ if 'CLIENT_ORIGIN' in os.environ:
     ]
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
-    extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
+    extracted_url = re.match(
+        r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE
+    ).group(0)
     CORS_ALLOWED_ORIGIN_REGEXES = [
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
@@ -169,16 +171,16 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
     },
 ]
 
