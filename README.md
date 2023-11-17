@@ -168,6 +168,8 @@ The bugs found while testing the React front-end can be found in this [README](h
 
 The developments' server url changed one hour before the deadline to hand in this project, when I was testing everything one last time. I changed the CLIENT_ORIGIN_DEV setting in the config vars on heroku, but it still would not render the new dev url.
 
+The default image was giving me errors until I changed the location from the folder 'images' to the parent folder 'media' on cloudinary. Right when testing everything for the last time I noticed that the default image was again not displayed correctly. Until the submission deadline I did unfortunately not find the solution for this defect.
+
 ## Deployment
 The Stories of the World API is deployed to Heroku, using an ElephantSQL Postgres database.
 To duplicate deployment to Heroku, follow these steps:
