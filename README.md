@@ -11,15 +11,11 @@ This project provides a Django Rest Framework API for the [Stories of the World 
   * [Planning](#planning)
     + [Data models](#data-models)
   * [API endpoints](#api-endpoints)
-  * [Frameworks, libraries and dependencies](#frameworks--libraries-and-dependencies)
+  * [Frameworks, libraries and dependencies](#frameworks-libraries-and-dependencies)
     + [django-cloudinary-storage](#django-cloudinary-storage)
-    + [dj-allauth](#dj-allauth)
     + [dj-rest-auth](#dj-rest-auth)
-    + [djangorestframework-simplejwt](#djangorestframework-simplejwt)
     + [dj-database-url](#dj-database-url)
     + [psychopg2](#psychopg2)
-    + [python-dateutil](#python-dateutil)
-    + [django-recurrence](#django-recurrence)
     + [django-filter](#django-filter)
     + [django-cors-headers](#django-cors-headers)
   * [Testing](#testing)
@@ -46,11 +42,23 @@ The logic of the project uses 7 models, that are connected with each other. An o
 </details>
 
 ## API endpoints
-| **URL** | **Notes** | **HTTP Method** | **CRUD operation** | **View type** | **POST/PUT data format** |
-|---|---|---:|---|---:|---|
-|  |  |  |  |  |  |
-| **Custom user <br>account endpoints** |  |  |  |  |  |
-|  |  |  |  |  |  |
+| **URL** | **User Story** | **HTTP Method** | **CRUD operation** |
+|---|---|---|---|
+| /posts/create | as a user I can create a post | POST | create |
+| /posts/int:pk | as a user I can view a story | GET | list |
+| /posts/int:pk/edit | as a user I can edit my story | PUT | update |
+| /posts/int:pk/delete | as a user I can delete my story | DELETE | destroy |
+| /profiles/int:pk | as a user I can view a profile | GET | list |
+| /profiles/int:pk/edit | as a user I can edit my profile | PUT | update |
+| /profiles/int:pk/edit/username | as a user I can edit my username | PUT | update |
+| /profiles/int:pk/edit/password | as a user I can change my password | PUT | update |
+| /profiles/int:pk/delete | as a developer (admin user) I can delete a profile | DELETE | destroy |
+| /comments | as a developer I can view all comments | GET | list |
+| /likes | as a developer I can view all likes | GET | list |
+| /followers | as a developer I can view which profile is following who | GET | list |
+| /categories | as a developer I can view all categories | GET | list |
+| /categories/category/int:pk/change/ | as a developer I can update a category | PUT | update |
+| /categories/category/int:pk/delete/ | as a developer I can delete a category | DELETE | destroy 
 
 ## Frameworks, libraries and dependencies
 
