@@ -200,4 +200,5 @@ To duplicate deployment to Heroku, follow these steps:
 
 ## Credits
 
+- basic structure inspired by the drf api walkthrough project of CodeInstitute
 - Setting up the category model: [LogRocket Article](https://blog.logrocket.com/use-django-rest-framework-to-build-a-blog/)
