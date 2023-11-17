@@ -10,7 +10,6 @@ This project provides a Django Rest Framework API for the [Stories of the World 
   * [Table of contents](#table-of-contents)
   * [Planning](#planning)
     + [Data models](#data-models)
-    + [**Notification**](#--notification--)
   * [API endpoints](#api-endpoints)
   * [Frameworks, libraries and dependencies](#frameworks--libraries-and-dependencies)
     + [django-cloudinary-storage](#django-cloudinary-storage)
@@ -90,6 +89,62 @@ This Django app adds Cross-Origin-Resource Sharing (CORS) headers to responses, 
 ### Manual testing
 
 ### Python validation
+
+The validation was undertaken with the [PEP8 Validator of CodeInstitute](https://pep8ci.herokuapp.com/) for each file with the following results:
+<br><br>
+CATEGORIES APP: <br>
+`admin.py` -> All clear, no errors found
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+COMMENTS APP: <br>
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+FIRSTEVERBACKEND APP: <br>
+`permissions.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`settings.py`  -> All clear, no errors found (although # noqa was used when it did not make sence to break the line)
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+`wsgi.py`  -> All clear, no errors found
+<br><br>
+FOLLOWERS APP: <br>
+`apps.py`  -> All clear, no errors found
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+LIKES APP: <br>
+`apps.py`  -> All clear, no errors found
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+POSTS APP: <br>
+`admin.py`  -> All clear, no errors found
+`apps.py`  -> All clear, no errors found
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+LIKES APP: <br>
+`admin.py`  -> All clear, no errors found
+`apps.py`  -> All clear, no errors found
+`models.py`  -> All clear, no errors found
+`serializers.py`  -> All clear, no errors found
+`urls.py`  -> All clear, no errors found
+`views.py`  -> All clear, no errors found
+<br><br>
+`env.py`  -> All clear, no errors found (although # noqa was used when it did not make sence to break the line)
+
 
 ### Resolved bugs
 
